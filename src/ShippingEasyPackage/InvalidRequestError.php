@@ -1,5 +1,7 @@
 <?php
 
+namespace dpsr\ShippingEasyPackage;
+
 class ShippingEasy_InvalidRequestError extends ShippingEasy_Error
 {
   public function __construct($message, $http_status=null, $http_body=null, $json_body=null)

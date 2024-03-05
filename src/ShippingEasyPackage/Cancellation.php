@@ -1,5 +1,5 @@
 <?php
-
+namespace dpsr\ShippingEasyPackage;
 class ShippingEasy_Cancellation extends ShippingEasy_Object
 {
 

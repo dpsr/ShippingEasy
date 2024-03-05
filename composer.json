@@ -1,5 +1,5 @@
 {
-    "name": "dpsr/shipping-easy-package",
+    "name": "dpsr/ShippingEasyPackage",
     "version": "1.0.0",
     "description": "shipping easy package for composer require",
     "type": "library",

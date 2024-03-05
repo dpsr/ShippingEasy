@@ -1,5 +1,7 @@
 <?php
 
+namespace dpsr\ShippingEasyPackage;
+
 class ShippingEasy_PartnerSession extends ShippingEasy_Object
 {
   public function create($data = array())

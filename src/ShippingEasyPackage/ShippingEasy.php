@@ -1,5 +1,7 @@
 <?php
 
+namespace dpsr\ShippingEasyPackage;
+
 abstract class ShippingEasy
 {
   public static $apiKey;

@@ -1,6 +1,8 @@
 <?php
 
-class ShippingEasy_Error extends Exception
+namespace dpsr\ShippingEasyPackage;
+
+class ShippingEasy_Error extends \Exception
 {
   public function __construct($message=null, $http_status=null, $http_body=null, $json_body=null)
   {

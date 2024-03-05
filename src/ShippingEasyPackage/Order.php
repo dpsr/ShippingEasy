@@ -1,5 +1,7 @@
 <?php
 
+namespace dpsr\ShippingEasyPackage;
+
 class ShippingEasy_Order extends ShippingEasy_Object
 {
   public function __construct($store_api_key=null, $values=null) {

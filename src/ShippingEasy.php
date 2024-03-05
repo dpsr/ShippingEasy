@@ -13,21 +13,21 @@ if (!function_exists('mb_detect_encoding')) {
   throw new Exception('ShippingEasy needs the Multibyte String PHP extension.');
 }
 
-require(dirname(__FILE__) . '/ShippingEasy/ShippingEasy.php');
+require(dirname(__FILE__) . '/ShippingEasyPackage/ShippingEasy.php');
 
 // Errors
-require(dirname(__FILE__) . '/ShippingEasy/Error.php');
-require(dirname(__FILE__) . '/ShippingEasy/ApiError.php');
-require(dirname(__FILE__) . '/ShippingEasy/ApiConnectionError.php');
-require(dirname(__FILE__) . '/ShippingEasy/AuthenticationError.php');
-require(dirname(__FILE__) . '/ShippingEasy/InvalidRequestError.php');
+require(dirname(__FILE__) . '/ShippingEasyPackage/Error.php');
+require(dirname(__FILE__) . '/ShippingEasyPackage/ApiError.php');
+require(dirname(__FILE__) . '/ShippingEasyPackage/ApiConnectionError.php');
+require(dirname(__FILE__) . '/ShippingEasyPackage/AuthenticationError.php');
+require(dirname(__FILE__) . '/ShippingEasyPackage/InvalidRequestError.php');
 
-require(dirname(__FILE__) . '/ShippingEasy/ApiRequestor.php');
-require(dirname(__FILE__) . '/ShippingEasy/Authenticator.php');
-require(dirname(__FILE__) . '/ShippingEasy/Object.php');
-require(dirname(__FILE__) . '/ShippingEasy/Order.php');
-require(dirname(__FILE__) . '/ShippingEasy/PartnerSession.php');
-require(dirname(__FILE__) . '/ShippingEasy/PartnerAccount.php');
-require(dirname(__FILE__) . '/ShippingEasy/Signature.php');
-require(dirname(__FILE__) . '/ShippingEasy/SignedUrl.php');
-require(dirname(__FILE__) . '/ShippingEasy/Cancellation.php');
+require(dirname(__FILE__) . '/ShippingEasyPackage/ApiRequestor.php');
+require(dirname(__FILE__) . '/ShippingEasyPackage/Authenticator.php');
+require(dirname(__FILE__) . '/ShippingEasyPackage/Object.php');
+require(dirname(__FILE__) . '/ShippingEasyPackage/Order.php');
+require(dirname(__FILE__) . '/ShippingEasyPackage/PartnerSession.php');
+require(dirname(__FILE__) . '/ShippingEasyPackage/PartnerAccount.php');
+require(dirname(__FILE__) . '/ShippingEasyPackage/Signature.php');
+require(dirname(__FILE__) . '/ShippingEasyPackage/SignedUrl.php');
+require(dirname(__FILE__) . '/ShippingEasyPackage/Cancellation.php');

@@ -1,5 +1,7 @@
 <?php
 
+namespace dpsr\ShippingEasyPackage;
+
 class ShippingEasy_Object
 {
   public function request($meth, $path, $params=null, $payload = null, $apiKey = null, $apiSecret = null)

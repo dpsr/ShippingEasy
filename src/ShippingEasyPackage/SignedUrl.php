@@ -1,5 +1,7 @@
 <?php
 
+namespace dpsr\ShippingEasyPackage;
+
 class ShippingEasy_SignedUrl
 {
   public function __construct($http_method=null, $path=null, $params=null, $json_body=null, $api_timestamp=null, $api_key = null, $api_secret = null)
