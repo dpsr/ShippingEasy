@@ -1,6 +1,6 @@
 <?php
 
-namespace dpsr\ShippingEasyPackage;
+namespace Dpsr\ShippingEasyPackage;
 
 class ShippingEasy_PartnerAccount extends ShippingEasy_Object
 {

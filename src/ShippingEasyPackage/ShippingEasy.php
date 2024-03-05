@@ -1,6 +1,6 @@
 <?php
 
-namespace dpsr\ShippingEasyPackage;
+namespace Dpsr\ShippingEasyPackage;
 
 abstract class ShippingEasy
 {

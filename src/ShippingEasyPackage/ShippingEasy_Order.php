@@ -1,6 +1,6 @@
 <?php
 
-namespace dpsr\ShippingEasyPackage;
+namespace Dpsr\ShippingEasyPackage;
 
 class ShippingEasy_Order extends ShippingEasy_Object
 {
