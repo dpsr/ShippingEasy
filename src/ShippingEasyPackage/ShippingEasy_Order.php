@@ -2,7 +2,7 @@
 
 namespace Dpsr\ShippingEasyPackage;
 
-class ShippingEasy_Order extends ShippingEasy_Object
+class ShippingEasyOrder extends ShippingEasyObject
 {
   public function __construct($store_api_key=null, $values=null) {
     $this->store_api_key = $store_api_key;

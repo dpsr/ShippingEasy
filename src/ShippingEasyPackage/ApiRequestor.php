@@ -1,6 +1,6 @@
 <?php
 namespace Dpsr\ShippingEasyPackage;
-class ShippingEasy_ApiRequestor
+class ShippingEasyApiRequestor
 {
   public $apiKey;
   public $apiSecret;
@@ -49,26 +49,26 @@ class ShippingEasy_ApiRequestor
   {
 
     if (!is_array($resp) || !isset($resp['errors']))
-      throw new ShippingEasy_ApiError("Invalid response object from API: $rbody (HTTP response code was $rcode)", $rcode, $rbody, $resp);
+      throw new ShippingEasyApiError("Invalid response object from API: $rbody (HTTP response code was $rcode)", $rcode, $rbody, $resp);
 
     $error = $resp['errors'];
     $message = isset($error[0]['message']) ? $error[0]['message'] : null;
 
     switch ($rcode) {
     case 400:
-      throw new ShippingEasy_InvalidRequestError(json_encode($error), $rcode, $rbody, $resp);
+      throw new ShippingEasyInvalidRequestError(json_encode($error), $rcode, $rbody, $resp);
     case 404:
-      throw new ShippingEasy_InvalidRequestError($message, $rcode, $rbody, $resp);
+      throw new ShippingEasyInvalidRequestError($message, $rcode, $rbody, $resp);
     case 401:
-      throw new ShippingEasy_AuthenticationError($message, $rcode, $rbody, $resp);
+      throw new ShippingEasyAuthenticationError($message, $rcode, $rbody, $resp);
     default:
-      throw new ShippingEasy_ApiError($message, $rcode, $rbody, $resp);
+      throw new ShippingEasyApiError($message, $rcode, $rbody, $resp);
     }
   }
 
   private function _requestRaw($http_method, $path, $params, $payload, $apiKey, $apiSecret)
   {
-    $url = new ShippingEasy_SignedUrl($http_method, $path, $params, $payload, null, $apiKey, $apiSecret);
+    $url = new ShippingEasySignedUrl($http_method, $path, $params, $payload, null, $apiKey, $apiSecret);
     $absUrl = $url->toString();
 
     $langVersion = phpversion();
@@ -96,7 +96,7 @@ class ShippingEasy_ApiRequestor
     try {
       $resp = json_decode($rbody, true);
     } catch (Exception $e) {
-      throw new ShippingEasy_ApiError("Invalid response body from API: $rbody (HTTP response code was $rcode)", $rcode, $rbody);
+      throw new ShippingEasyApiError("Invalid response body from API: $rbody (HTTP response code was $rcode)", $rcode, $rbody);
     }
     if ($rcode < 200 || $rcode >= 300) {
       $this->handleApiError($rbody, $rcode, $resp);
@@ -135,7 +135,7 @@ class ShippingEasy_ApiRequestor
 	      $absUrl = "$absUrl?$encoded";
       }
     } else {
-      throw new ShippingEasy_ApiError("Unrecognized method $meth");
+      throw new ShippingEasyApiError("Unrecognized method $meth");
     }
 
     $opts[CURLOPT_URL] = $absUrl;
@@ -181,6 +181,6 @@ class ShippingEasy_ApiRequestor
     }
 
     $msg .= "\n\n(Network error [errno $errno]: $message)";
-    throw new ShippingEasy_ApiConnectionError($msg);
+    throw new ShippingEasyApiConnectionError($msg);
   }
 }

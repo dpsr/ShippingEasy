@@ -2,7 +2,7 @@
 
 namespace Dpsr\ShippingEasyPackage;
 
-class ShippingEasy_PartnerAccount extends ShippingEasy_Object
+class ShippingEasyPartnerAccount extends ShippingEasyObject
 {
   public function create($data = array())
   {

@@ -1,6 +1,6 @@
 <?php
 namespace Dpsr\ShippingEasyPackage;
-class ShippingEasy_Authenticator
+class ShippingEasyAuthenticator
 {
   
   # Instantiates a new authenticator object. 
@@ -16,7 +16,7 @@ class ShippingEasy_Authenticator
     $api_secret = isset($api_secret) ? $api_secret : ShippingEasy::$apiSecret;
     $this->supplied_signature_string = $params["api_signature"];
     unset($params["api_signature"]);
-    $this->expected_signature = new ShippingEasy_Signature($api_secret, $http_method, $path, $params, $json_body);
+    $this->expected_signature = new ShippingEasySignature($api_secret, $http_method, $path, $params, $json_body);
   }
 
   public function getExpectedSignature()

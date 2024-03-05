@@ -2,7 +2,7 @@
 
 namespace Dpsr\ShippingEasyPackage;
 
-class ShippingEasy_Signature
+class ShippingEasySignature
 {
   public function __construct($api_secret=null, $http_method=null, $path=null, $params=null, $json_body=null)
   {

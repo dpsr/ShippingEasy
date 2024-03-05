@@ -2,7 +2,7 @@
 
 namespace Dpsr\ShippingEasyPackage;
 
-class ShippingEasy_InvalidRequestError extends ShippingEasy_Error
+class ShippingEasyInvalidRequestError extends ShippingEasyError
 {
   public function __construct($message, $http_status=null, $http_body=null, $json_body=null)
   {

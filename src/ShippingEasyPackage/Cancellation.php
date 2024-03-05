@@ -1,6 +1,6 @@
 <?php
 namespace Dpsr\ShippingEasyPackage;
-class ShippingEasy_Cancellation extends ShippingEasy_Object
+class ShippingEasyCancellation extends ShippingEasyObject
 {
 
   public function __construct($store_api_key, $external_order_identifier) {
