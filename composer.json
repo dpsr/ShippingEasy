@@ -14,7 +14,6 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Dpsr\\ShippingEasyPackage",
                 "Dpsr\\ShippingEasyOrder"
             ]
         }
