@@ -1,11 +1,11 @@
 <?php
-namespace Dpsr;
+namespace Dpsr\ShippingEasyPackage;
 
 class ShippingEasyAuthenticator
 {
-  
-  # Instantiates a new authenticator object. 
-  # 
+
+  # Instantiates a new authenticator object.
+  #
   # http_method - The method of the http request. E.g. "post" or "get".
   # path - The path of the request's uri. E.g. "/orders/callback"
   # params - An associative array of the request's query string parameters. E.g. array("api_signature" => "asdsadsad", "api_timestamp" => "1234567899")
@@ -29,10 +29,10 @@ class ShippingEasyAuthenticator
   {
     return $this->supplied_signature_string;
   }
-  
+
   public function isAuthenticated()
   {
     return $this->getExpectedSignature()->equals($this->getSuppliedSignatureString());
   }
-   
+
 }

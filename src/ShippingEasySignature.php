@@ -1,6 +1,6 @@
 <?php
 
-namespace Dpsr;
+namespace Dpsr\ShippingEasyPackage;
 
 class ShippingEasySignature
 {
@@ -48,7 +48,7 @@ class ShippingEasySignature
   {
     $parts = array($this->getHttpMethod());
     $parts[] = $this->getPath();
-    
+
     if (!empty($this->getParams()))
       $parts[] = http_build_query($this->getParams());
 

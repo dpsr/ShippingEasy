@@ -1,5 +1,5 @@
 <?php
-namespace Dpsr;
+namespace Dpsr\ShippingEasyPackage;
 
 class ShippingEasyApiError extends ShippingEasyError
 {
