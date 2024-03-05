@@ -1,5 +1,6 @@
 <?php
-namespace Dpsr\ShippingEasyPackage;
+namespace Dpsr;
+
 class ShippingEasyApiConnectionError extends ShippingEasyError
 {
 }

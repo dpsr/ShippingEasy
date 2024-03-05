@@ -1,5 +1,6 @@
 <?php
-namespace Dpsr\ShippingEasyPackage;
+namespace Dpsr;
+
 class ShippingEasyAuthenticationError extends ShippingEasyError
 {
 }

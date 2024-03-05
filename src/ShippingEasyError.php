@@ -1,6 +1,6 @@
 <?php
 
-namespace Dpsr\ShippingEasyPackage;
+namespace Dpsr;
 
 class ShippingEasyError extends \Exception
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Dpsr\ShippingEasyPackage;
+namespace Dpsr;
 
 class ShippingEasyInvalidRequestError extends ShippingEasyError
 {

@@ -1,5 +1,7 @@
 <?php
-namespace Dpsr\ShippingEasyPackage;
+namespace Dpsr;
+use Dpsr\ShippingEasyPackage\Exception;
+
 class ShippingEasyApiRequestor
 {
   public $apiKey;

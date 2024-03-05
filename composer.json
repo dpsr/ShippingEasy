@@ -1,6 +1,6 @@
 {
     "name": "dpsr/shippingeasypackage",
-    "version": "1.0.7",
+    "version": "1.0.8",
     "description": "shipping easy package for composer require",
     "type": "library",
     "license": "MIT",

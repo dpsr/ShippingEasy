@@ -1,33 +1,59 @@
 <?php
 
-// Tested on PHP 5.2, 5.3
+namespace Dpsr;
 
-// This snippet (and some of the curl code) due to the Facebook SDK.
-if (!function_exists('curl_init')) {
-  throw new Exception('ShippingEasy needs the CURL PHP extension.');
+abstract class ShippingEasy
+{
+  public static $apiKey;
+  public static $apiSecret;
+  public static $partnerApiKey;
+  public static $partnerApiSecret;
+  public static $apiBase = 'https://api.shippingeasy.com';
+  public static $apiVersion = null;
+  const VERSION = '0.4.3';
+
+  public static function getApiKey()
+  {
+    return self::$apiKey;
+  }
+
+  public static function setApiKey($apiKey)
+  {
+    self::$apiKey = $apiKey;
+  }
+
+  public static function getPartnerApiKey()
+    {
+      return self::$partnerApiKey;
+    }
+
+  public static function setPartnerApiKey($partnerApiKey)
+  {
+    self::$partnerApiKey = $partnerApiKey;
+  }
+
+  public static function setApiSecret($apiSecret)
+  {
+    self::$apiSecret = $apiSecret;
+  }
+
+  public static function setPartnerApiSecret($partnerApiSecret)
+  {
+    self::$partnerApiSecret = $partnerApiSecret;
+  }
+
+  public static function getApiVersion()
+  {
+    return self::$apiVersion;
+  }
+
+  public static function setApiVersion($apiVersion)
+  {
+    self::$apiVersion = $apiVersion;
+  }
+
+  public static function setApiBase($apiBase)
+  {
+    self::$apiBase = $apiBase;
+  }
 }
-if (!function_exists('json_decode')) {
-  throw new Exception('ShippingEasy needs the JSON PHP extension.');
-}
-if (!function_exists('mb_detect_encoding')) {
-  throw new Exception('ShippingEasy needs the Multibyte String PHP extension.');
-}
-
-require(dirname(__FILE__) . '/ShippingEasyPackage/ShippingEasy.php');
-
-// Errors
-require(dirname(__FILE__) . '/ShippingEasyPackage/Error.php');
-require(dirname(__FILE__) . '/ShippingEasyPackage/ApiError.php');
-require(dirname(__FILE__) . '/ShippingEasyPackage/ApiConnectionError.php');
-require(dirname(__FILE__) . '/ShippingEasyPackage/AuthenticationError.php');
-require(dirname(__FILE__) . '/ShippingEasyPackage/InvalidRequestError.php');
-
-require(dirname(__FILE__) . '/ShippingEasyPackage/ApiRequestor.php');
-require(dirname(__FILE__) . '/ShippingEasyPackage/Authenticator.php');
-require(dirname(__FILE__) . '/ShippingEasyPackage/Object.php');
-require(dirname(__FILE__) . '/ShippingEasyPackage/Order.php');
-require(dirname(__FILE__) . '/ShippingEasyPackage/PartnerSession.php');
-require(dirname(__FILE__) . '/ShippingEasyPackage/PartnerAccount.php');
-require(dirname(__FILE__) . '/ShippingEasyPackage/Signature.php');
-require(dirname(__FILE__) . '/ShippingEasyPackage/SignedUrl.php');
-require(dirname(__FILE__) . '/ShippingEasyPackage/Cancellation.php');
