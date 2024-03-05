@@ -1,6 +1,6 @@
 {
     "name": "dpsr/shippingeasypackage",
-    "version": "1.0.3",
+    "version": "1.0.4",
     "description": "shipping easy package for composer require",
     "type": "library",
     "autoload": {
