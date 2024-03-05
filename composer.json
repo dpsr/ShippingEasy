@@ -1,13 +1,22 @@
 {
     "name": "dpsr/shippingeasypackage",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "description": "shipping easy package for composer require",
     "type": "library",
     "autoload": {
         "psr-4": {
-            "Dpsr\\ShippingEasyPackage\\": "src/"
+            "Dpsr\\ShippingEasyPackage\\": "src/",
+            "Dpsr\\ShippingEasyOrder\\": "src/ShippingEasyPackage/ShippingEasy_Order"
         }
     },
 
-    "require": {}
+    "require": {},
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Dpsr\\ShippingEasyPackage",
+                "Dpsr\\ShippingEasyOrder"
+            ]
+        }
+    }
 }
